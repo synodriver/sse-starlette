@@ -166,7 +166,7 @@ class EventSourceResponse(Response):
 
         _headers = {}
         if headers is not None:  # pragma: no cover
-            _headers.update(headers)
+            _headers |= headers
 
         # mandatory for servers-sent events headers
         _headers["Cache-Control"] = "no-cache"
